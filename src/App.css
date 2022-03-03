@@ -1,42 +1,30 @@
-.App {
-  text-align: center;
+body{
+  background-color: rgb(62, 113, 158);
+}
+.container{
+  width: 600px;
+  height: auto;
+  margin-top:100px;
+  margin-left: 600px;
+  background-color: rgb(225, 235, 223);
+  display: inline-block;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form{
+  margin-left: 82px;
+  padding: 20px 0 23px 100px;
+  width: 400px;
+  margin-top: 100px;
+}
+label{
+  font-size: 18px;
+  line-height: 10px;
+
+}
+.nameField,.nrcField{
+  margin: 0 0 10px 0px;
+  padding: 10px 0 15px 0;
+
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-li{
-  list-style: none;
-}

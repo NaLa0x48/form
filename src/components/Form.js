@@ -1,7 +1,6 @@
 import uniqid from 'uniqid'
 import { useState } from 'react';
-const genderOption = ['male','female'];
-const majorOption = ['ICT','EcE','AME',"PRE"];
+
 const acadamicOption = ['firstYear','secondYear','thirdYear','fourthYear','fifthYear','finalYear'];
 const Form = () => {
    
@@ -18,29 +17,40 @@ const Form = () => {
         console.log(formData);
     }
     return ( 
+    <div className='container'> 
         <form onSubmit={handleSubmit}> 
-            <label>Name :</label><br></br>
-            <input type="text" name="name" value={formData.name} onChange={handleChange}/><br></br>
+            <div className='nameField'>
+                <label>Name </label><br></br>
+                <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" required/><br></br>
+            </div>
+            <div className='nrcField'>
             <label>NRC :</label><br></br>
-            <input type="text" name="nrc" value={formData.nrc} onChange={handleChange}/><br></br>
+            <input type="text" name="nrc" value={formData.nrc} onChange={handleChange} placeholder="your NRC number" required/><br></br>
+            </div>
             <label>Gender</label>
             <br></br>
-            {genderOption.map((gender)=>(
-            <li key={uniqid()}> 
-            <input type="radio" name="gender" value={gender} onClick={handleChange}/><label>{gender}</label><br></br>
-            </li>))}
+            <input type="radio" name="gender" value ="male" checked ={formData.gender ==="male"} onChange={handleChange}/>Male<br/>
+            <input type="radio" name="gender" value="female" onChange={handleChange}/>Female<br/>
 
             <label>Address</label>
             <br></br>
-            <textarea name="address" value={formData.address} onChange={handleChange} >
+            <textarea name="address" value={formData.address} onChange={handleChange} required>
 
             </textarea>
             <br></br>
             <label>Major</label><br></br>
-            {majorOption.map((major)=>(
-            <li key={uniqid()}>
-            <input  type="radio"  name={major} value={major} id={uniqid()}onChange={handleChange}/><label>{major}</label><br></br>
-            </li>))}
+            <input type = "radio" id = "ICT" name ="major" value="ICT" checked ={formData.major ==="ICT"} onChange={handleChange}/>
+            <label>ICT</label><br/>
+            <input type = "radio" id = "IST" name ="major" value="IST" onChange={handleChange}/>
+            <label>IST</label><br/>
+            <input type = "radio" id = "CE" name ="major" value="CE" onChange={handleChange}/>
+            <label>CE</label><br/>
+            <input type = "radio" id = "AME" name ="major" value="AME" onChange={handleChange}/>
+            <label>AME</label><br/>
+            <input type = "radio" id = "ECE" name ="major" value="ECE" onChange={handleChange}/>
+            <label>ECE</label><br/>
+            <input type = "radio" id = "PrE" name ="major" value="PrE" onChange={handleChange}/>
+            <label>PrE</label><br/>
             <label>Academic Year</label>
             <select name="acadamicYear" onChange={handleChange} value={formData.acadamicYear}>
                 {acadamicOption.map((acadamic)=>(
@@ -57,6 +67,7 @@ const Form = () => {
             <br></br>
             <button type='submit'>submit</button>
         </form>
+     </div>
      );
 }
  
