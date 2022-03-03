@@ -3,10 +3,10 @@ body{
 }
 .container{
   width: 850px;
-  height: 1350px;
+  height: 1450px;
   margin-top:150px;
   margin-left: 500px;
-  background-color: rgb(225, 235, 223);
+  background-color: rgb(68, 84, 173);
   display: inline-block;
 }
 
@@ -15,7 +15,8 @@ form{
   padding: 20px 0 23px 0 20px;
   width: 700px;
   margin-top: 100px;
-  background-color: rgb(132, 130, 219);
+  margin-bottom: 100px;
+  background-color: rgba(255, 255, 255, 0.966);
 }
 label{
   font-size: 25px;
@@ -37,7 +38,30 @@ label{
   width: 400px;
   height: 80px;
 }
+
 button{
   margin: 0 0 10px 300px;
 }
 
+/* Header part */
+
+.logoImg{
+  width: 200px;
+  display: inline;
+
+}
+.headerField h1{
+  display: inline;
+  float: right;
+  margin-right: 122px;
+  font-size: 60px;
+}
+.container h1{
+  margin-left: 200px;
+}
+
+.headerField{
+  height: 200px;
+  width: 100%;
+  background-color: white;
+}

@@ -18,6 +18,7 @@ const Form = () => {
     }
     return ( 
     <div className='container'> 
+    <h1>Student Registration Form</h1>
         <form onSubmit={handleSubmit}> 
             <div className='nameField'>
                 <label>Name </label><br></br>
