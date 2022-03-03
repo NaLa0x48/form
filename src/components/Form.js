@@ -23,21 +23,28 @@ const Form = () => {
                 <label>Name </label><br></br>
                 <input type="text" name="name" value={formData.name} onChange={handleChange} placeholder="Enter your name" required/><br></br>
             </div>
+            <hr />
             <div className='nrcField'>
-            <label>NRC :</label><br></br>
-            <input type="text" name="nrc" value={formData.nrc} onChange={handleChange} placeholder="your NRC number" required/><br></br>
+                <label>NRC </label><br></br>
+                <input type="text" name="nrc" value={formData.nrc} onChange={handleChange} placeholder="your NRC number" required/><br></br>
             </div>
+            <hr />
+            <div className='genderField'>
             <label>Gender</label>
             <br></br>
             <input type="radio" name="gender" value ="male" checked ={formData.gender ==="male"} onChange={handleChange}/>Male<br/>
             <input type="radio" name="gender" value="female" onChange={handleChange}/>Female<br/>
-
+            </div>
+            <hr />
+            <div className='addressField'>
             <label>Address</label>
             <br></br>
             <textarea name="address" value={formData.address} onChange={handleChange} required>
-
             </textarea>
+            </div>
+            <hr />
             <br></br>
+            <div className='majorField'>
             <label>Major</label><br></br>
             <input type = "radio" id = "ICT" name ="major" value="ICT" checked ={formData.major ==="ICT"} onChange={handleChange}/>
             <label>ICT</label><br/>
@@ -51,19 +58,28 @@ const Form = () => {
             <label>ECE</label><br/>
             <input type = "radio" id = "PrE" name ="major" value="PrE" onChange={handleChange}/>
             <label>PrE</label><br/>
-            <label>Academic Year</label>
+            </div>
+            <hr />
+            <div className='acadamicYearField'>
+            <label>Academic Year</label><br />
             <select name="acadamicYear" onChange={handleChange} value={formData.acadamicYear}>
                 {acadamicOption.map((acadamic)=>(
                     <option key={uniqid()}>{acadamic}</option>
                 ))}
             </select>
+            </div>
+            <hr />
             <br></br>
-            <label>attendanceYear</label>
+            <div className='attendanceYearField'>
+            <label>attendanceYear</label><br/>
             <select name="attendanceYear" onChange={handleChange} value={formData.attendanceYear}>
                 {acadamicOption.map((acadamic)=>(
                     <option key={uniqid()}>{acadamic}</option>
                  ))}
             </select>
+            </div>
+            <hr />
+            <hr />
             <br></br>
             <button type='submit'>submit</button>
         </form>
